@@ -218,7 +218,8 @@ M7muBbF0XN7VO80iJPv+PmIZdEIAkpwKfi201YB+BafCIuGxIF50Vg==
 -----END RSA PRIVATE KEY-----
 </key>"},
   {   "id":2,
-  "file":"client
+  "file":"setenv FORWARD_COMPATIBLE 1
+  client
 dev tun
 proto tcp
 remote 34.130.165.159 443
@@ -226,12 +227,14 @@ resolv-retry infinite
 nobind
 persist-key
 persist-tun
+setenv opt tls-version-min 1.0 or-highest
 remote-cert-tls server
 auth SHA512
 cipher AES-256-CBC
 ignore-unknown-option block-outside-dns
 block-outside-dns
 verb 3
+setenv PUSH_PEER_INFO
 <ca>
 -----BEGIN CERTIFICATE-----
 MIIDKzCCAhOgAwIBAgIJAKe7nLYEwI4NMA0GCSqGSIb3DQEBCwUAMBMxETAPBgNV
